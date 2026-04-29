@@ -1,4 +1,4 @@
-//AddFood.jsx
+//AddRun.jsx
 import React from 'react'
 import logo from './../assets/logo.png'
 import RunningSAU from './../components/RunningSAU'
@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import supabase from './../services/supabaseClient'
 
-export default function AddFood() {
+export default function AddRun() {
   const navigate = useNavigate();
   // สร้างตัวแปร State สำหรับข้อมูลบน component ที่ต้องบริหารจัดการ
   const [runDate, setRunDate] = useState('')
