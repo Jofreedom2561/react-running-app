@@ -2,11 +2,12 @@
 import React from 'react'
 import logo from './../assets/logo.png'
 import RunningSAU from './../components/RunningSAU'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import supabase from './../services/supabaseClient'
 
 export default function AddFood() {
+  const navigate = useNavigate();
   // สร้างตัวแปร State สำหรับข้อมูลบน component ที่ต้องบริหารจัดการ
   const [runDate, setRunDate] = useState('')
   const [runPlace, setRunPlace] = useState('')
@@ -63,7 +64,9 @@ export default function AddFood() {
     alert('บันทึกข้อมูลการวิ่งเรียบร้อยแล้วครับ') //สามารถใช้ Swal
 
     // ย้อนกลับไปยังหน้าแสดงข้อมูลการวิ่งทั้งหมด
-    window.location.href = '/showallrun'
+    // window.location.href = '/showallrun'
+    navigate('/showallrun')
+
   }
 
   // สร้างฟังก์ชันยกเลิก
