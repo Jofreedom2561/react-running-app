@@ -60,6 +60,11 @@ export default function AddFood() {
         run_image_url: run_image_url
       })
 
+    if(insertError){
+      alert(insertError.message)
+      return;
+    }
+
     // แสดงข้อความแจ้งเตือนว่าบันทึกสำเร็จแล้ว
     alert('บันทึกข้อมูลการวิ่งเรียบร้อยแล้วครับ') //สามารถใช้ Swal
 
